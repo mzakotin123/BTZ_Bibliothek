@@ -1,0 +1,44 @@
+Buchdaten eingeben
+
+(Achtung, in den Eingabefeldern für EAN, Auflage, Erscheinungsjahr und Seitenzahl 
+ ist nur die Eingabe aller Ziffern von 0 bis 9 sowie das Löschen des Eintrags mit der 
+ Löschtaste zugelassen, ansonsten sind keine Tastaturoptionen möglich, weshalb in den
+ genannten Eingabefeldern das Kopieren sowie das Einfügen kopierter Daten nur übers 
+ Kontextmenü erfolgen kann.
+ In allen anderen Eingabefeldern hingegen ist jede Tastatureingabe bzw. -Option möglich.)
+
+1. EAN mit Scanner einscannen (falls nicht möglich -> manuelle Eingabe der Ziffern von 0 bis 9)
+2. EAN - ISBN ohne Bindestriche - kopieren (Rechtsklick -> Kontextmenü -> "Kopieren")
+3. Internetbrowser öffnen, anschließend kopierte EAN mit Strg+V in die Eingabezeile einfügen
+4. ersten Link anklicken (solange keine Werbung)
+5. Rechtsklick aufs Bild -> Kontextmenü
+6. "Bild speichern (unter)..." bzw. "Grafik speichern unter..." auswählen (hängt vom Browser ab) -> Dialogfeld
+7. Speicherort auswählen (z. B.: "F\...\BTZ_Bibliothek\Titelbilder")
+8. Klick auf die Schaltfläche "Speichern" im Dialogfeld -> Dialogfeld wird geschlossen
+
+Titelbild in die Anwendung laden: 
+1. Klick auf die Schaltfläche "Titelbild laden" -> Dialogfeld
+2. Bilddatei mit dem Namen des Buchtitels im Dialogfeld per Doppelklick auswählen
+   (zuvor, falls keine Bilddateien zur Auswahl stehen, Pfad "...\BTZ_Bibliothek\Titelbilder" öffnen)
+- Dialogfeld wird geschlossen, Titelbild des Buches wird angezeigt
+
+- anschließend alle weiteren Daten in die dazugehörigen Eingabefelder einfügen und speichern
+ (Pfad fürs Speichern: "...\BTZ_Bibliothek\Buchdaten")
+- Inhalt der gerade gespeicherten Datei sowie Titelbild (aus dem Ordner "...\BTZ_Bibliothek\Titelbilder") 
+  in die Datei "Liste_aller_Buecher_der_BTZ_Bibliothek" (im Ordner "...\BTZ_Bibliothek\Buchdaten") kopieren und einfügen
+  
+  Wenn im Anwendungsfenster einschließlich der Tabs zum Buchautor sowie zum betroffenen Beruf
+  mindestens ein Eingabefeld (abgesehen vom Titelbild-Feld) leer ist bzw. ein Dialogfeld
+  mit einem Klick aufs Kreuz in der rechten oberen Ecke oder auf die Schaltfläche "Abbrechen" 
+  geschlossen wird, erscheint jeweils eine Fehlermeldung in Form eines Hinweisfensters.
+  Sollten einige Daten wie z. B. die Auflagenummer oder das Erscheinungsjahr weder im Buch
+  noch im Internet zur Verfügung stehen, dann müsste der Nutzer fiktive Daten, aber aus
+  plausiblen Zahlen in die dazugehörigen Felder eintragen. Den Kurztitel eines Buches soll sich der Nutzer 
+  immer - jedoch nur mit Bezug auf den Originaltitel - selbst ausdenken, da dieser in der Regel nie gegeben ist.
+  
+
+  
+   
+
+
+

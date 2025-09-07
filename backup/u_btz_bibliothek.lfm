@@ -1,0 +1,639 @@
+object frm_BTZ_Bibliothek: Tfrm_BTZ_Bibliothek
+  Left = 474
+  Height = 962
+  Top = 1
+  Width = 1030
+  Caption = 'BTZ-Bibliothek'
+  ClientHeight = 962
+  ClientWidth = 1030
+  OnCreate = FormCreate
+  LCLVersion = '2.2.2.0'
+  object LE_BuchID: TLabeledEdit
+    Left = 643
+    Height = 23
+    Top = 24
+    Width = 120
+    EditLabel.Height = 15
+    EditLabel.Width = 120
+    EditLabel.Caption = 'Buch_ID:'
+    EditLabel.ParentColor = False
+    ReadOnly = True
+    TabOrder = 0
+    Text = '1'
+  end
+  object L_Titelbild: TLabel
+    Left = 48
+    Height = 15
+    Top = 200
+    Width = 56
+    AutoSize = False
+    Caption = 'Titelbild:'
+    ParentColor = False
+  end
+  object List_Buecher: TListBox
+    Left = 624
+    Height = 167
+    Top = 720
+    Width = 379
+    Items.Strings = (
+      'Grundkurs C'
+      'Computer-Netzwerke'
+      'Einstieg in PHP 7 und MySQL  5.6'
+      'The Rust Programming Language'
+      'Programmieren mit SQL'
+      'ActionScript für Flash MX'
+      'Anwendungsentwicklung in Theorie und Praxis'
+      'Software Engineering'
+      'Grafik und Gestaltung'
+      'C/C++'
+    )
+    ItemHeight = 15
+    OnClick = List_BuecherClick
+    TabOrder = 1
+  end
+  object L_Buecherliste: TLabel
+    Left = 624
+    Height = 15
+    Top = 704
+    Width = 64
+    AutoSize = False
+    Caption = 'Bücherliste'
+    ParentColor = False
+  end
+  object bt_neu: TButton
+    Left = 48
+    Height = 25
+    Top = 912
+    Width = 115
+    Caption = 'Neuer Datensatz'
+    OnClick = bt_neuClick
+    TabOrder = 2
+  end
+  object bt_speichern: TButton
+    Left = 288
+    Height = 25
+    Top = 912
+    Width = 115
+    Caption = 'Datensatz speichern'
+    OnClick = bt_speichernClick
+    TabOrder = 3
+  end
+  object bt_loeschen: TButton
+    Left = 408
+    Height = 25
+    Top = 912
+    Width = 115
+    Caption = 'Datensatz löschen'
+    OnClick = bt_loeschenClick
+    TabOrder = 4
+  end
+  object bt_erster_DS: TButton
+    Left = 528
+    Height = 25
+    Top = 912
+    Width = 115
+    Caption = 'Erster Datensatz'
+    OnClick = bt_erster_DSClick
+    TabOrder = 5
+  end
+  object bt_letzter_DS: TButton
+    Left = 888
+    Height = 25
+    Top = 912
+    Width = 115
+    Caption = 'Letzter Datensatz'
+    OnClick = bt_letzter_DSClick
+    TabOrder = 6
+  end
+  object bt_Titelbild: TButton
+    Left = 168
+    Height = 25
+    Top = 912
+    Width = 115
+    Caption = 'Titelbild laden'
+    OnClick = bt_TitelbildClick
+    TabOrder = 7
+  end
+  object TabControl_Autor_Beruf: TTabControl
+    Left = 643
+    Height = 336
+    Top = 272
+    Width = 360
+    OnChange = TabControl_Autor_BerufChange
+    TabIndex = 0
+    Tabs.Strings = (
+      'Autor'
+      'Beruf'
+    )
+    TabOrder = 8
+    object CB_Berufsbezeichnung: TComboBox
+      Left = 16
+      Height = 23
+      Top = 96
+      Width = 264
+      ItemHeight = 15
+      Items.Strings = (
+        'Fachinformatiker'
+        'Mediengestalter'
+        'Kaufleute'
+        'Fachpraktiker'
+      )
+      OnChange = CB_BerufsbezeichnungChange
+      ReadOnly = True
+      TabOrder = 1
+    end
+    object CB_Fachrichtung: TComboBox
+      Left = 16
+      Height = 23
+      Top = 144
+      Width = 264
+      ItemHeight = 15
+      OnChange = CB_FachrichtungChange
+      ReadOnly = True
+      TabOrder = 2
+    end
+    object CB_Kurzbezeichnung: TComboBox
+      Left = 16
+      Height = 23
+      Top = 192
+      Width = 264
+      ItemHeight = 15
+      ReadOnly = True
+      TabOrder = 3
+    end
+    object CB_Ausbildungsraum: TComboBox
+      Left = 16
+      Height = 23
+      Top = 240
+      Width = 264
+      ItemHeight = 15
+      ReadOnly = True
+      TabOrder = 4
+    end
+    object CB_Ausbildungsgruppe: TComboBox
+      Left = 16
+      Height = 23
+      Top = 288
+      Width = 264
+      ItemHeight = 15
+      ReadOnly = True
+      TabOrder = 5
+    end
+    object L_Berufsbezeichnung: TLabel
+      Left = 16
+      Height = 17
+      Top = 80
+      Width = 112
+      AutoSize = False
+      Caption = 'Berufsbezeichnung:'
+      ParentColor = False
+    end
+    object L_Kurzbezeichnung: TLabel
+      Left = 16
+      Height = 17
+      Top = 176
+      Width = 104
+      AutoSize = False
+      Caption = 'Kurzbezeichnung:'
+      ParentColor = False
+    end
+    object L_Ausbildungsraum: TLabel
+      Left = 16
+      Height = 17
+      Top = 224
+      Width = 104
+      AutoSize = False
+      Caption = 'Ausbildungsraum:'
+      ParentColor = False
+    end
+    object L_Ausbildungsgruppe: TLabel
+      Left = 16
+      Height = 17
+      Top = 272
+      Width = 112
+      AutoSize = False
+      Caption = 'Ausbildungsgruppe:'
+      ParentColor = False
+    end
+    object CB_Vorname: TComboBox
+      Left = 16
+      Height = 23
+      Top = 96
+      Width = 264
+      ItemHeight = 15
+      Items.Strings = (
+        'Jürgen'
+        'Harald'
+        'Thomas'
+        'Steve, Carol'
+        'Dirk'
+        'Colin'
+        'Albrecht'
+        'Jochen, Horst'
+        'Markus'
+        'Ulrich, Christoph'
+      )
+      TabOrder = 6
+    end
+    object L_Vorname: TLabel
+      Left = 16
+      Height = 17
+      Top = 80
+      Width = 112
+      AutoSize = False
+      Caption = 'Vorname(-n):'
+      Font.CharSet = ANSI_CHARSET
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object L_Fachrichtung: TLabel
+      Left = 16
+      Height = 17
+      Top = 128
+      Width = 80
+      AutoSize = False
+      Caption = 'Fachrichtung:'
+      ParentColor = False
+    end
+    object CB_Nachname: TComboBox
+      Left = 16
+      Height = 23
+      Top = 144
+      Width = 264
+      ItemHeight = 15
+      Items.Strings = (
+        'Wolf'
+        'Zisler'
+        'Theis'
+        'Klabnik, Nichols'
+        'Hardy'
+        'Moock'
+        'Ehlert'
+        'Ludewig, Lichter'
+        'Wäger'
+        'Kaiser, Kecher'
+      )
+      TabOrder = 7
+    end
+    object L_Nachname: TLabel
+      Left = 16
+      Height = 17
+      Top = 128
+      Width = 112
+      AutoSize = False
+      Caption = 'Nachname(-n):'
+      Font.CharSet = ANSI_CHARSET
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+  end
+  object L_KeyPress_EAN: TLabel
+    Left = 320
+    Height = 48
+    Top = 8
+    Width = 280
+    AutoSize = False
+    Caption = '(nur Backspace-Taste und Ziffern von 0 bis 9 als'#13#10' Tastatureingabe erlaubt, falls nicht vorhanden,'#13#10' dann bitte fiktive Daten eingeben)'
+    Font.CharSet = ANSI_CHARSET
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object L_KeyPress_Erscheinungsjahr: TLabel
+    Left = 320
+    Height = 47
+    Top = 808
+    Width = 280
+    AutoSize = False
+    Caption = '(nur Backspace-Taste und Ziffern von 0 bis 9 als'#13#10' Tastatureingabe erlaubt, falls nicht vorhanden,'#13#10' dann bitte fiktive Daten eingeben)'
+    Font.CharSet = ANSI_CHARSET
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object L_ReadOnly_BuchID: TLabel
+    Left = 779
+    Height = 23
+    Top = 24
+    Width = 224
+    AutoSize = False
+    Caption = 'Keine Nutzereingabe, nur Leserechte!'
+    Font.CharSet = ANSI_CHARSET
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object L_Berufsdaten: TLabel
+    Left = 643
+    Height = 48
+    Top = 224
+    Width = 360
+    AutoSize = False
+    Caption = 'In den Auswahlfeldern zu den Berufsdaten ist keine '#13#10'Tastatureingabe erlaubt. Die Daten sollen per Mausklick'#13#10'aus diesen Kombinationsfeldern ausgewählt werden.'#13#10' '
+    Font.CharSet = ANSI_CHARSET
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object L_geschwKlammer: TLabel
+    Left = 292
+    Height = 319
+    Top = 744
+    Width = 24
+    Anchors = [akTop]
+    AutoSize = False
+    Caption = '}'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -107
+    Font.Name = 'Segoe UI Light'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object L_Autordaten: TLabel
+    Left = 643
+    Height = 48
+    Top = 224
+    Width = 360
+    AutoSize = False
+    Caption = 'Wenn mehr als zwei Autor(inn)en und ein(-e) '#13#10'Herausgeber(-in) namentlich gegeben sind, dann soll'#13#10'der/die Herausgeber(-in) als Autor(-in) eingetragen werden.'
+    Font.CharSet = ANSI_CHARSET
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object CB_EAN: TComboBox
+    Left = 48
+    Height = 23
+    Top = 24
+    Width = 264
+    ItemHeight = 15
+    Items.Strings = (
+      '9783836241144'
+      '9783836264990'
+      '9783836239004'
+      '9781718500440'
+      '9783427095958'
+      '9783897212596'
+      '9783427016069'
+      '9783864900921'
+      '9783836241861'
+      '9783898428392'
+    )
+    OnKeyPress = CB_EANKeyPress
+    TabOrder = 9
+  end
+  object CB_Titel: TComboBox
+    Left = 48
+    Height = 23
+    Top = 72
+    Width = 264
+    ItemHeight = 15
+    Items.Strings = (
+      'Grundkurs C'
+      'Computer-Netzwerke'
+      'Einstieg in PHP 7 und MySQL  5.6'
+      'The Rust Programming Language'
+      'Programmieren mit SQL'
+      'ActionScript für Flash MX'
+      'Anwendungsentwicklung in Theorie und Praxis'
+      'Software Engineering'
+      'Grafik und Gestaltung'
+      'C/C++'
+    )
+    TabOrder = 10
+  end
+  object CB_Kurztitel: TComboBox
+    Left = 48
+    Height = 23
+    Top = 120
+    Width = 264
+    ItemHeight = 15
+    Items.Strings = (
+      'C'
+      'PC-NW'
+      'PHP 7 & MySQL 5.6'
+      'Rust'
+      'SQL'
+      'ActionScript'
+      'Ae_TuP'
+      'SE'
+      'GuG'
+      'C/C++'
+    )
+    TabOrder = 11
+  end
+  object CB_Verlag: TComboBox
+    Left = 48
+    Height = 23
+    Top = 168
+    Width = 264
+    ItemHeight = 15
+    Items.Strings = (
+      'Rheinwerk Computing'
+      'Rheinwerk Computing'
+      'Rheinwerk Computing'
+      'No Starch Press'
+      'Westermann'
+      'O''Reilly'
+      'ActionScript für Flash MX'
+      'dpunkt.verlag'
+      'Rheinwerk Design'
+      'Galileo Computing'
+    )
+    TabOrder = 12
+  end
+  object CB_Auflage: TComboBox
+    Left = 48
+    Height = 23
+    Top = 768
+    Width = 248
+    ItemHeight = 15
+    Items.Strings = (
+      '2'
+      '5'
+      '11'
+      '2'
+      '1'
+      '1'
+      '1'
+      '3'
+      '3'
+      '4'
+    )
+    OnKeyPress = CB_AuflageKeyPress
+    TabOrder = 13
+  end
+  object CB_Erscheinungsjahr: TComboBox
+    Left = 48
+    Height = 23
+    Top = 816
+    Width = 248
+    ItemHeight = 15
+    Items.Strings = (
+      '2016'
+      '2018'
+      '2016'
+      '2018'
+      '2021'
+      '2004'
+      '2019'
+      '2013'
+      '2010'
+      '2008'
+    )
+    OnKeyPress = CB_ErscheinungsjahrKeyPress
+    TabOrder = 14
+  end
+  object CB_Seitenzahl: TComboBox
+    Left = 48
+    Height = 23
+    Top = 864
+    Width = 248
+    ItemHeight = 15
+    Items.Strings = (
+      '432'
+      '456'
+      '600'
+      '530'
+      '184'
+      '152'
+      '504'
+      '666'
+      '736'
+      '1368'
+    )
+    OnKeyPress = CB_SeitenzahlKeyPress
+    TabOrder = 15
+  end
+  object L_EAN: TLabel
+    Left = 48
+    Height = 15
+    Top = 8
+    Width = 34
+    AutoSize = False
+    Caption = 'EAN:'
+    ParentColor = False
+  end
+  object L_Titel: TLabel
+    Left = 48
+    Height = 15
+    Top = 56
+    Width = 34
+    AutoSize = False
+    Caption = 'Titel:'
+    ParentColor = False
+  end
+  object L_Kurztitel: TLabel
+    Left = 48
+    Height = 15
+    Top = 104
+    Width = 56
+    AutoSize = False
+    Caption = 'Kurztitel:'
+    ParentColor = False
+  end
+  object L_Verlag: TLabel
+    Left = 48
+    Height = 15
+    Top = 152
+    Width = 42
+    AutoSize = False
+    Caption = 'Verlag:'
+    ParentColor = False
+  end
+  object L_Auflage: TLabel
+    Left = 48
+    Height = 15
+    Top = 752
+    Width = 48
+    AutoSize = False
+    Caption = 'Auflage:'
+    ParentColor = False
+  end
+  object L_Erscheinungsjahr: TLabel
+    Left = 48
+    Height = 15
+    Top = 800
+    Width = 104
+    AutoSize = False
+    Caption = 'Erscheinungsjahr:'
+    ParentColor = False
+  end
+  object L_Seitenzahl: TLabel
+    Left = 48
+    Height = 15
+    Top = 848
+    Width = 64
+    AutoSize = False
+    Caption = 'Seitenzahl:'
+    ParentColor = False
+  end
+  object Img_Titelbild: TImage
+    Left = 48
+    Height = 512
+    Top = 224
+    Width = 496
+  end
+  object bt_vorheriger_DS: TButton
+    Left = 648
+    Height = 25
+    Top = 912
+    Width = 115
+    Caption = 'Vorheriger Datensatz'
+    OnClick = bt_vorheriger_DSClick
+    TabOrder = 16
+  end
+  object bt_naechster_DS: TButton
+    Left = 768
+    Height = 25
+    Top = 912
+    Width = 115
+    Caption = 'Nächster Datensatz'
+    OnClick = bt_naechster_DSClick
+    TabOrder = 17
+  end
+  object L_Erklaerung_Listenfeld: TLabel
+    Left = 696
+    Height = 62
+    Top = 640
+    Width = 299
+    AutoSize = False
+    Caption = 'Beim Klick auf jeden Datensatz innerhalb der Liste'#13#10'werden die jeweiligen Datensätze angezeigt.'#13#10'Klickt der Nutzer in einen leeren Bereich '#13#10'innerhalb der Liste, erscheint eine Fehlermeldung.'
+    Font.CharSet = ANSI_CHARSET
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object OD_Titelbild: TOpenDialog
+    DefaultExt = '.*.jpg'
+    FileName = 'E:\IngE_20_01\Tag_Tag_Projekte\BTZ_Bibliothek'
+    Filter = 'Bilddateien|*.jpg|Alle Dateien|*.*'
+    Left = 280
+    Top = 416
+  end
+  object SD_Daten: TSaveDialog
+    DefaultExt = '.*.doc'
+    FileName = 'E:\IngE_20_01\Tag_Tag_Projekte\BTZ_Bibliothek\Buchdaten'
+    Filter = 'Dokumente|*.doc|Alle Dateien|*.*'
+    Left = 888
+    Top = 768
+  end
+end
